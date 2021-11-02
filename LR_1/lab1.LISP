@@ -1,0 +1,13 @@
+(defun right-angled (a b c)
+  (and (> a 0.0) (> b 0.0) (> c 0.0) 
+       (or (= (* a a)(+ (* b b) (* c c)))
+           (= (* b b)(+ (* c c) (* a a)))
+           (= (* c c)(+ (* a a) (* b b)))
+       )
+   )
+)
+
+(print (right-angled 0.0 0.0 0.0))
+(print (right-angled 1.0 0.0 1.0))
+(print (right-angled 5.0 3.0 4.0))
+(print (right-angled 5.0 3.3 4.2))
